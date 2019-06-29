@@ -1,0 +1,2018 @@
+2019-06-25 21:42:42 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: weather)
+2019-06-25 21:42:42 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.2 (v3.6.2:5fd33b5, Jul  8 2017, 04:57:36) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.5, Platform Windows-10-10.0.10240-SP0
+2019-06-25 21:42:42 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'weather', 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 5, 'LOG_FILE': 'log/scrapy_2019_6_25.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'weather.spiders', 'RETRY_ENABLED': False, 'SPIDER_MODULES': ['weather.spiders']}
+2019-06-25 21:42:42 [scrapy.extensions.telnet] INFO: Telnet Password: 19b1797c0a094102
+2019-06-25 21:42:42 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-25 21:42:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'weather.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-25 21:42:43 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-25 21:42:43 [scrapy.middleware] INFO: Enabled item pipelines:
+['weather.pipelines.W2csv',
+ 'weather.pipelines.W2json',
+ 'weather.pipelines.W2txt']
+2019-06-25 21:42:43 [scrapy.core.engine] INFO: Spider opened
+2019-06-25 21:42:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-25 21:42:43 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-25 21:42:45 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101011800.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:42:45 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101012000.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:42:45 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101012100.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:42:45 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101021101.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:42:46 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101021102.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:42:51 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101050707.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:42:58 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101060310.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:42:58 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101060311.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:42:58 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101060312.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101070404.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:07 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101080919.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:07 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101081000.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:08 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101081208.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:36 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101130505.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:38 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101131108.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:38 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101131205.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:43 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101150405.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:43 [scrapy.extensions.logstats] INFO: Crawled 955 pages (at 955 pages/min), scraped 6527 items (at 6527 items/min)
+2019-06-25 21:43:43 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101150704.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101150705.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101150706.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101150703.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101150710.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101150711.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:44 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101150805.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:49 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101170206.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:43:58 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101190106.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:01 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.weather.com.cn/weather/101181305.shtml>
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "e:\python\lib\site-packages\twisted\python\failure.py", line 512, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "e:\python\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "e:\python\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 352, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting http://www.weather.com.cn/weather/101181305.shtml took longer than 5.0 seconds..
+2019-06-25 21:44:08 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101201009.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:11 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101210602.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:12 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101210608.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:12 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101210609.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:14 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101211103.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:27 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101240314.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:33 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101251301.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:33 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101251302.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:37 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101260518.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:43 [scrapy.extensions.logstats] INFO: Crawled 2002 pages (at 1047 pages/min), scraped 13720 items (at 7193 items/min)
+2019-06-25 21:44:45 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101271914.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:51 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101282105.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:54 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101290910.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:56 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101291206.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:56 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101291304.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:56 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101291502.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:44:57 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101291505.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:02 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101320104.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:02 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101320105.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340301.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340603.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340602.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340701.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340501.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340601.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340902.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340801.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340802.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340901.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340904.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101340903.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\weatrher\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 21:45:04 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-06-25 21:45:04 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 1,
+ 'downloader/request_bytes': 894179,
+ 'downloader/request_count': 2424,
+ 'downloader/request_method_count/GET': 2424,
+ 'downloader/response_bytes': 45996393,
+ 'downloader/response_count': 2423,
+ 'downloader/response_status_count/200': 2423,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 6, 25, 13, 45, 4, 571569),
+ 'item_scraped_count': 16569,
+ 'log_count/ERROR': 57,
+ 'log_count/INFO': 11,
+ 'response_received_count': 2423,
+ 'scheduler/dequeued': 2424,
+ 'scheduler/dequeued/memory': 2424,
+ 'scheduler/enqueued': 2424,
+ 'scheduler/enqueued/memory': 2424,
+ 'spider_exceptions/IndexError': 56,
+ 'start_time': datetime.datetime(2019, 6, 25, 13, 42, 43, 778029)}
+2019-06-25 21:45:04 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-06-25 22:57:35 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: weather)
+2019-06-25 22:57:35 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.2 (v3.6.2:5fd33b5, Jul  8 2017, 04:57:36) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.5, Platform Windows-10-10.0.10240-SP0
+2019-06-25 22:57:35 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'weather', 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 5, 'LOG_FILE': 'log/scrapy_2019_6_25.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'weather.spiders', 'RETRY_ENABLED': False, 'SPIDER_MODULES': ['weather.spiders']}
+2019-06-25 22:57:35 [scrapy.extensions.telnet] INFO: Telnet Password: 1c41eda83f34ff07
+2019-06-25 22:57:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-25 22:57:36 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'weather.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-25 22:57:36 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-25 22:57:36 [scrapy.middleware] INFO: Enabled item pipelines:
+['weather.pipelines.W2csv',
+ 'weather.pipelines.W2json',
+ 'weather.pipelines.W2txt']
+2019-06-25 22:57:36 [scrapy.core.engine] INFO: Spider opened
+2019-06-25 22:57:36 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-25 22:57:36 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '北京',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '延庆',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '19℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '延庆',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '19℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '延庆',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '19℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '延庆',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '19℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '延庆',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '19℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '通州',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '通州',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '海淀',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '海淀',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '海淀',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '顺义',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '顺义',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '顺义',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '昌平',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '昌平',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '怀柔',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:40 [scrapy.core.scraper] ERROR: Error processing {'City': '怀柔',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '北京',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '北京',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '北京',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '延庆',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '19℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '延庆',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '19℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '通州',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '通州',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '通州',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '海淀',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '海淀',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '海淀',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '顺义',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '顺义',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '昌平',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '昌平',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '昌平',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '怀柔',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '怀柔',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '怀柔',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '丰台',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '丰台',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '丰台',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '石景',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '石景',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '石景',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '大兴',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '大兴',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '大兴',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '房山',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '房山',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '房山',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '密云',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '密云',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '密云',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '朝阳',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '朝阳',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '朝阳',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '北京',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '北京',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '通州',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '通州',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '海淀',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '顺义',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '顺义',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '昌平',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '昌平',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '怀柔',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '怀柔',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '丰台',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '丰台',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '丰台',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '石景',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '石景',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '石景',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '大兴',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '大兴',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '大兴',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '房山',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '房山',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '房山',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '密云',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '密云',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '密云',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '朝阳',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '朝阳',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '朝阳',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '门头',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '门头',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Error processing {'City': '门头',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:41 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101011800.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '北京',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '丰台',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '石景',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '大兴',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '房山',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '密云',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '朝阳',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '门头',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '门头',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '门头',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '八达',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '八达',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '佛爷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '佛爷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '佛爷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '平谷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '平谷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '平谷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101012000.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '门头',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '八达',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '八达',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '八达',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '佛爷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '佛爷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '佛爷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '平谷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '平谷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '平谷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '八达',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '八达',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '23℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '佛爷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '21℃',
+ 'Weather': '晴',
+ 'WindDirection': '西北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '平谷',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '22℃',
+ 'Weather': '晴',
+ 'WindDirection': '北风',
+ 'WindStrength': '<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.weather.com.cn/weather/101012100.shtml> (referer: None)
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\spiders\wea.py", line 34, in parse
+    item['Date'] = weather.xpath('./li[' + str(i + 1) + ']/h1/text()').extract()[0]
+IndexError: list index out of range
+2019-06-25 22:57:42 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-06-25 22:57:42 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-06-25 22:57:42 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '上海',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '24℃',
+ 'Weather': '小雨',
+ 'WindDirection': '东南风',
+ 'WindStrength': '3-4级转<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '上海',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '24℃',
+ 'Weather': '小雨',
+ 'WindDirection': '东南风',
+ 'WindStrength': '3-4级转<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.scraper] ERROR: Error processing {'City': '上海',
+ 'Date': '1日（周一）',
+ 'LowTemperature': '24℃',
+ 'Weather': '小雨',
+ 'WindDirection': '东南风',
+ 'WindStrength': '3-4级转<3级'}
+Traceback (most recent call last):
+  File "e:\python\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\wearther\weather\weather\pipelines.py", line 53, in process_item
+    with open(filename, 'a+', newline = '') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/weather/weather/weather/data/weather.csv'
+2019-06-25 22:57:42 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in http://www.weather.com.cn/weather/101020200.shtml. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2019-06-25 23:03:10 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: weather)
+2019-06-25 23:03:10 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.2 (v3.6.2:5fd33b5, Jul  8 2017, 04:57:36) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.5, Platform Windows-10-10.0.10240-SP0
+2019-06-25 23:03:10 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'weather', 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 5, 'LOG_FILE': 'log/scrapy_2019_6_25.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'weather.spiders', 'RETRY_ENABLED': False, 'SPIDER_MODULES': ['weather.spiders']}
+2019-06-25 23:03:10 [scrapy.extensions.telnet] INFO: Telnet Password: 0ea3b30a7f164518
+2019-06-25 23:03:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-25 23:03:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'weather.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-25 23:03:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-25 23:03:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['weather.pipelines.W2csv',
+ 'weather.pipelines.W2json',
+ 'weather.pipelines.W2txt']
+2019-06-25 23:03:11 [scrapy.core.engine] INFO: Spider opened
+2019-06-25 23:03:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-25 23:03:11 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-25 23:03:15 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-06-25 23:03:16 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2019-06-25 23:03:16 [scrapy.core.engine] INFO: Closing spider (shutdown)
